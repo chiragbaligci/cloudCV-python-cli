@@ -1,0 +1,22 @@
+import argparse
+
+if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-a" , "--ak"   , help="authkey:")    #using optional arguments
+    parser.add_argument("-H" , "--host" , help="host ID:")
+
+
+    args = parser.parse_args()   #making instance of the properties of above information
+
+    print("\n")
+
+    print("AUTHORISATION KEY: " ,args.ak)
+    print("HOST ID:           " ,args.host)
+
+    print("\n")
+
+    if args.ak == args.host:
+        print("EvalAI-CLI is configured")
+    else:
+        print("EvalAI-CLI is NOT configured")
